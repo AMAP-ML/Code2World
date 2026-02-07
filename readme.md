@@ -1,7 +1,7 @@
 # <img src="figure/logo.png" alt="icon" width="24" height="24"> Code2World: A GUI World Model via Renderable Code Generation
 <div style='display:flex; gap: 0.25rem; '>
 <a href='LICENCE'><img src='https://img.shields.io/badge/License-Apache 2.0-g.svg'></a>
-<a href='https://arxiv.org/abs/2311.16922'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
+<!-- <a href='https://arxiv.org/abs/2311.16922'><img src='https://img.shields.io/badge/Paper-PDF-red'></a> -->
 </div>
 This is the official repo for Code2World, a novel VLM-based GUI World Model that predicts dynamic transitions via renderable code generation.
 
