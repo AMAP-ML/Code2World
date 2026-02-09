@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Code2World: A GUI World Model via Renderable Code Generation">
+  <meta property="og:title" content="Code2World: A GUI World Model via Renderable Code Generation"/>
+  <meta property="og:description" content="Code2World: A GUI World Model via Renderable Code Generation"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta name="twitter:title" content="Code2World: A GUI World Model via Renderable Code Generation">
+  <meta name="twitter:description" content="Code2World: A GUI World Model via Renderable Code Generation">
+  <meta name="keywords" content="Code2World, GUI World Model, Renderable Code Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Code2World: A GUI World Model via Renderable Code Generation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero" style="padding-top: 0; margin-top: -30px;">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="title-with-icon">
+            <img src="static/images/logo.png" alt="icon" width="48" height="48" class="title-icon">
+            <h1 class="title is-spaced is-1 publication-title">Code2World:</h1>
+          </div>
+          <h1 class="title is-spaced is-2" style="margin-bottom: 0.5rem;">A GUI World Model via Renderable Code Generation</h1>
+          <br>
+
+          <div class="is-size-5 publication-authors author-list">
+            <span class="author-block">
+              <strong>Yuhao Zheng</strong><sup>1,2†*</sup></span>
+            <span class="author-block">
+              <strong>Li'an Zhong</strong><sup>3†</sup></span>
+            <span class="author-block">
+              <strong>Yi Wang</strong><sup>2</sup></span>
+            <span class="author-block">
+              <strong>Rui Dai</strong><sup>2</sup></span>
+            <span class="author-block">
+              <strong>Kaikui Liu</strong><sup>2</sup></span>
+            
+            <span class="break"></span>
+            
+            <span class="author-block">
+              <strong>Xiangxiang Chu</strong><sup>2</sup></span>
+            <span class="author-block">
+              <strong>Linyuan Lü</strong><sup>1</sup></span>
+            <span class="author-block">
+              <strong>Philip Torr</strong><sup>4</sup></span>
+            <span class="author-block">
+              <strong>Kevin Qinghong Lin</strong><sup>4</sup></span>
+          </div>
+
+          <br>
+
+          <div class="is-size-5 publication-authors author-list institutions-list">
+            <span class="author-block"><sup>1</sup>University of Science and Technology of China</span>
+            <span class="author-block"><sup>2</sup>AMAP, Alibaba Group</span>
+            <span class="author-block"><sup>3</sup>Sun Yat-sen University</span>
+            <span class="author-block"><sup>4</sup>University of Oxford</span>
+          </div>
+
+          <div class="is-size-5 publication-authors author-list notes-list">
+            <span class="eql-cntrb"><small><sup>†</sup>Equal contribution</small></span>
+            <span class="eql-cntrb"><small><sup>*</sup>Work done during internship at AMAP, Alibaba Group</small></span>
+          </div>
+
+          <br>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2311.16922" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/AMAP-ML/Code2World" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/GD-ML/AndroidCode" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"> 
+                    🤗
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/GD-ML/Code2World" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="static/images/modelscope.svg" alt="" width="18" height="18" />
+                  </span>
+                  <span>Model</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Autonomous GUI agents interact with environments by perceiving interfaces and executing actions. As a virtual sandbox, GUI World model empowers agents with human-like foresight by enabling action-conditioned prediction. However, existing text- and pixel- based approaches struggle to simultaneously achieve high visual fidelity and fine-grained structural controllability. To this end, we propose <strong>Code2World</strong>, a vision-language coder that simulates next visual state via <strong>renderable code generation</strong>. Especially, to address the data scarcity problem, we construct <strong>AndroidCode</strong> by translating GUI trajectories into high-fidelity HTML and refining synthesized code through a visual-feedback revision loop, resulting in <strong>over 80K</strong> high-quality screen-action pairs. To adapt existing VLMs into code prediction, we first perform SFT as a cold start for format layout following, then further apply <strong>Render-Aware Reinforcement Learning</strong> which uses the final rendered outcome by enforcing visual semantic fidelity and action consistency. Extensive experiments demonstrate that Code2World-8B achieves the top-performing next UI prediction, rivaling the competitive GPT-5 and Gemini-3-Pro-Image. Notably, <em>Code2World significantly enhances downstream navigation success rates in a flexible manner</em>, boosting Gemini-2.5-Flash by {+9.5%} on AndroidWorld navigation.
+          </p>
+        </div>
+        <div class="container is-max-desktop">
+          <img src="static/images/framework.png" alt="Code2World Framework" style="max-width: 100%; height: auto;"/>
+        </div>
+        <div class="content has-text-centered">
+          <p><em>Figure 1. Illustration of the "Propose, Simulate, Select" pipeline for Code2World enhanced GUI agent, exemplified by an AndroidWorld task. <strong>(1) Propose</strong>: The GUI agent generates K candidate actions, with <strong>red</strong> and <strong>green</strong> highlighting hallucinated/irrational reasoning and logically sound reasoning, respectively. <strong>(2) Simulate</strong>: Code2World predicts the execution result of each candidate via renderable code generation. <strong>(3) Select</strong>: By evaluating the rendered future states, the system identifies the potential failure in the original policy and rectifies the decision, ultimately selecting the optimal action that aligns with the user's intent.</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero is-small tight-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="box my-2">
+          <h2 class="title is-3">Experiments</h2>
+          <div class="content has-text-justified">
+            <p><strong>Table 1. Quantitative Comparison</strong> of various image and code generation models on Android Control <strong>(ID)</strong> to assess basic capabilities on the same device, and GUI Odyssey <strong>(OOD)</strong> to test generalization robustness across unseen devices and cross-app scenarios. The best scores are in <strong>bold</strong> while the second best are in <ins>underlined</ins>.</p>
+          </div>
+          <div class="container is-max-desktop">
+            <img src="static/images/Tab1.png" alt="Table 1" style="max-width: 100%; height: auto;"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small tight-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="box my-2">
+          <h2 class="title is-3">Examples</h2>
+          <div class="content has-text-justified">
+            <p>Here are more qualitative comparison of next GUI state generation over Code2World and three baselines.</p>
+          </div>
+          <div class="container is-max-desktop">
+            <img src="static/images/case1.png" alt="Case 1" style="max-width: 100%; height: auto; margin-bottom: 1rem;"/>
+            <p><em>Figure 2. Launch the email application from the home screen to access the inbox.</em></p>
+            <br>
+            <img src="static/images/case2.png" alt="Case 2" style="max-width: 100%; height: auto; margin-bottom: 1rem;"/>
+            <p><em>Figure 3. Click on "All News" button in the Cerebra Research application to view news content.</em></p>
+            <br>
+            <img src="static/images/case3.png" alt="Case 3" style="max-width: 100%; height: auto; margin-bottom: 1rem;"/>
+            <p><em>Figure 4. Mark a reminder task as completed by tapping the "Complete" button in the Reminder app.</em></p>
+            <br>
+            <img src="static/images/case4.png" alt="Case 4" style="max-width: 100%; height: auto; margin-bottom: 1rem;"/>
+            <p><em>Figure 5. Apply product filters by tapping the "Apply Filter" button in the e-commerce app to refresh the item list.</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="Citation">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <div class="content has-text-justified">
+      <p>If you find our project useful, we hope you can star our repo and cite our paper as follows:</p>
+    <pre class="bibtex-block">
+<code>
+  11111
+</code></pre>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<style>
+  .container_full img {
+    width: 100%;
+    height: 100%;
+  }
+  .container_half img {
+    width: 40%;
+    height: 40%;
+  }
+  
+  .title-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .title-with-icon .title-icon {
+    margin: 0;
+    vertical-align: middle;
+  }
+  
+  .title-with-icon h1 {
+    margin: 0;
+  }
+  
+  .publication-authors.author-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .publication-authors.author-list .author-block {
+    display: inline-block;
+    margin: 0.25rem 0.5rem;
+  }
+  
+  .publication-authors.author-list .break {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  
+  .publication-authors.institutions-list {
+    margin-top: 0.5rem;
+  }
+  
+  .publication-authors.notes-list {
+    margin-top: 0.5rem;
+  }
+  
+  .publication-authors.notes-list .eql-cntrb {
+    display: block;
+    margin: 0.25rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .publication-authors.author-list {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .publication-authors.author-list .author-block {
+      margin: 0.25rem 0;
+    }
+    
+    .publication-authors.author-list .break {
+      display: none;
+    }
+  }
+</style>
