@@ -119,7 +119,7 @@ class Gpt4Wrapper(LlmWrapper, MultimodalLlmWrapper):
       model_name: str,
       max_retry: int = 3,
       temperature: float = 0.0,
-      base_url = "https://tao.plus7.plus/v1/chat/completions"
+      base_url = 'https://api.openai.com/v1/chat/completions'
   ):
     if 'OPENAI_API_KEY' not in os.environ:
       raise RuntimeError('OpenAI API key not set.')
@@ -145,7 +145,6 @@ class Gpt4Wrapper(LlmWrapper, MultimodalLlmWrapper):
   def predict_mm(
       self, text_prompt: str, images: list[np.ndarray], max_tokens=8192
   ) -> tuple[str, Optional[bool], Any]:
-    # print("请求地址为：", self.base_url, "apikey为", self.openai_api_key)
     headers = {
         'Content-Type': 'application/json',
         'Authorization': f'Bearer {self.openai_api_key}',
@@ -182,7 +181,6 @@ class Gpt4Wrapper(LlmWrapper, MultimodalLlmWrapper):
             headers=headers,
             json=payload,
         )
-        # print("接口返回的原始响应为：", response)
         print("接口返回的原始响应的json格式（tokens消耗信息）为：", response.json())
         if response.ok and 'choices' in response.json():
           return (
