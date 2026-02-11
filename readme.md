@@ -53,6 +53,14 @@ _Figure 5. Apply product filters by tapping the "Apply Filter" button in the e-c
 ## 📑 Citation
 If you find our project useful, we hope you can star our repo and cite our paper as follows:
 ```
-
+@misc{code2world,
+      title={Code2World: A GUI World Model via Renderable Code Generation}, 
+      author={Yuhao Zheng and Li'an Zhong and Yi Wang and Rui Dai and Kaikui Liu and Xiangxiang Chu and Linyuan Lv and Philip Torr and Kevin Qinghong Lin},
+      year={2026},
+      eprint={2602.09856},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2602.09856}, 
+}
 ```
 
