@@ -8,6 +8,7 @@
 This is the official repo for Code2World, a novel VLM-based GUI World Model that predicts dynamic transitions via renderable code generation.
 
 
+**TL;DR: Coder with Next-Page Prediction as GUI World Model.** 
 
 
 ## 🎯 Overview
