@@ -1,18 +1,12 @@
-# <img src="figure/logo.png" alt="icon" width="24" height="24"> Code2World: A GUI World Model via Renderable Code Generation
-<div style='display:flex; gap: 0.25rem; '>
-<a href='LICENCE'><img src='https://img.shields.io/badge/License-Apache 2.0-g.svg'></a>
-<!-- <a href='https://arxiv.org/abs/2311.16922'><img src='https://img.shields.io/badge/Paper-PDF-red'></a> -->
-</div>
-This is the official repo for Code2World, a novel VLM-based GUI World Model that predicts dynamic transitions via renderable code generation.
-
-
-
-
-## 🎯 Overview
-Autonomous GUI agents interact with environments by perceiving interfaces and executing actions.As a virtual sandbox, GUI World model empowers agents with human-like foresight by enabling action-conditioned prediction.However, existing text- and pixel- based approaches struggle to simultaneously achieve high visual fidelity and fine-grained structural controllability.To this end, we propose **Code2World**, a vision-language coder that simulates next visual state via **renderable code generation**. Especially, to address the data scarcity problem, we construct **AndroidCode** by translating GUI trajectories into high-fidelity HTML and refining synthesized code through a visual-feedback revision loop, resulting in **over 80K** high-quality screen-action pairs. To adapt existing VLMs into code prediction, we first perform SFT as a cold start for format layout following, then further apply **Render-Aware Reinforcement Learning** which uses the final rendered outcome by enforcing visual semantic fidelity and action consistency. Extensive experiments demonstrate that Code2World-8B achieves the top-performing next UI prediction, rivaling the competitive GPT-5 and Gemini-3-Pro-Image. Notably, \textit{Code2World significantly enhances downstream navigation success rates in a flexible manner}, boosting Gemini-2.5-Flash by {+9.5\%} on AndroidWorld navigation.
-<!-- ![pipeline](figure/pipeline.jpg) -->
-![framework](figure/framework.png)
-_Figure 1. Illustration of the "Propose, Simulate, Select" pipeline for Code2World enhanced GUI agent, exemplified by an AndroidWorld task. **(1) Propose**: The GUI agent generates $K$ candidate actions, with **red** and **green** highlighting hallucinated/irrational reasoning and logically sound reasoning, respectively. **(2) Simulate**: Code2World predicts the execution result of each candidate via renderable code generation. **(3) Select**: By evaluating the rendered future states, the system identifies the potential failure in the original policy and rectifies the decision, ultimately selecting the optimal action that aligns with the user's intent._
+# <img src="figure/logo.png" alt="icon" width="50" height="50"> Code2World: A GUI World Model via Renderable Code Generation
+<p align="center">
+<a href="https://amap-ml.github.io/Code2World" target="_blank"><img src="https://img.shields.io/badge/Project-Page-brightgreen"></a>
+<a href="https://arxiv.org/abs/2602.09856" target="_blank"><img src="https://img.shields.io/badge/arXiv-2511.02778-red"></a>
+<a href="https://huggingface.co/GD-ML/Code2World" target="_blank"><img src="https://img.shields.io/badge/🤗%20Model-Code2World-ffd21e"></a>
+<a href="https://huggingface.co/datasets/GD-ML/AndroidCode" target="_blank"><img src="https://img.shields.io/badge/🤗%20Dataset-AndroidCode-ffd21e"></a>
+<a href="https://huggingface.co/papers/2602.09856" target="_blank"><img src="https://img.shields.io/badge/🤗%20Daily%20Paper-2602.09856-ffd21e"></a>
+</p>
+Official implementation for Code2World, a novel VLM-based GUI World Model that predicts dynamic transitions via renderable code generation.
 
 ## 🕹️ Usage
 ### Environment Setup
