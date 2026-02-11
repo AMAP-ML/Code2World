@@ -4,7 +4,7 @@
 <a href="https://arxiv.org/abs/2602.09856" target="_blank"><img src="https://img.shields.io/badge/arXiv-2511.02778-red"></a>
 <a href="https://huggingface.co/GD-ML/Code2World" target="_blank"><img src="https://img.shields.io/badge/🤗%20Model-Code2World-ffd21e"></a>
 <a href="https://huggingface.co/datasets/GD-ML/AndroidCode" target="_blank"><img src="https://img.shields.io/badge/🤗%20Dataset-AndroidCode-ffd21e"></a>
-<a href="https://huggingface.co/papers/2602.09856" target="_blank"><img src="https://img.shields.io/badge/🤗%20Daily%20Paper-2602.09856-ffd21e"></a>
+<!-- <a href="https://huggingface.co/papers/2602.09856" target="_blank"><img src="https://img.shields.io/badge/🤗%20Daily%20Paper-2602.09856-ffd21e"></a>/ -->
 </p>
 Official implementation for Code2World, a novel VLM-based GUI World Model that predicts dynamic transitions via renderable code generation.
 
