@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Code2World: A GUI World Model via Renderable Code Generation</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/logo.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -114,8 +114,8 @@
 
               <span class="link-block">
                 <a href="https://huggingface.co/GD-ML/Code2World" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <img src="static/images/modelscope.svg" alt="" width="18" height="18" />
+                  <span class="icon"> 
+                    🤗
                   </span>
                   <span>Model</span>
                 </a>
@@ -139,16 +139,44 @@
           </p>
         </div>
         <div class="container is-max-desktop">
-          <img src="static/images/framework.png" alt="Code2World Framework" style="max-width: 100%; height: auto;"/>
+          <img src="static/images/teaser.png" alt="Code2World Framework" style="max-width: 100%; height: auto;"/>
         </div>
         <div class="content has-text-centered">
-          <p><em>Figure 1. Illustration of the "Propose, Simulate, Select" pipeline for Code2World enhanced GUI agent, exemplified by an AndroidWorld task. <strong>(1) Propose</strong>: The GUI agent generates K candidate actions, with <strong>red</strong> and <strong>green</strong> highlighting hallucinated/irrational reasoning and logically sound reasoning, respectively. <strong>(2) Simulate</strong>: Code2World predicts the execution result of each candidate via renderable code generation. <strong>(3) Select</strong>: By evaluating the rendered future states, the system identifies the potential failure in the original policy and rectifies the decision, ultimately selecting the optimal action that aligns with the user's intent.</em></p>
+          <p><em>Figure 1. <strong>Illustration of Code2World.</strong> Given a current GUI observation and an action, Code2World predicts the next screenshot via renderable code generation.</em></p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+
+<section class="section hero is-small tight-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="box my-2">
+          <h2 class="title is-3">Methodology</h2>
+
+        <div class="container is-max-desktop">
+          <img src="static/images/pipeline.png" alt="Code2World pipeline" style="max-width: 100%; height: auto;"/>
+        </div>
+        <div class="content has-text-centered">
+          <p><em>Figure 2. <strong>Left: Illustration of Data Synthesis.</strong> The high-fidelity <em>AndroidCode</em> dataset is curated via <em>constrainted initial synthesis</em> and a <em>visual-feedback revision loop</em>, where synthesized HTML is iteratively refined based on rendered visual discrepancies to ensure strict alignment (SigLIP score &gt; 0.9). <strong>Right: Two-stage Model Optimization.</strong> The pipeline progresses from an SFT cold start to <em>Render-Aware Reinforcement Learning (RARL)</em>. Utilizing Group Relative Policy Optimization (GRPO), the model optimizes dual rewards—visual semantic (R<sub>sem</sub>) and action consistency (R<sub>act</sub>)—derived directly from <em>rendered outcomes</em> to enforce structural and logical fidelity.</em></p>
+        </div>
+
+        <div class="container is-max-desktop">
+          <img src="static/images/framework.png" alt="Code2World Framework" style="max-width: 100%; height: auto;"/>
+        </div>
+        <div class="content has-text-centered">
+          <p><em>Figure 3. Illustration of the "Propose, Simulate, Select" pipeline for Code2World enhanced GUI agent, exemplified by an AndroidWorld task. <strong>(1) Propose</strong>: The GUI agent generates K candidate actions, with <strong>red</strong> and <strong>green</strong> highlighting hallucinated/irrational reasoning and logically sound reasoning, respectively. <strong>(2) Simulate</strong>: Code2World predicts the execution result of each candidate via renderable code generation. <strong>(3) Select</strong>: By evaluating the rendered future states, the system identifies the potential failure in the original policy and rectifies the decision, ultimately selecting the optimal action that aligns with the user's intent.</em></p>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section hero is-small tight-section">
   <div class="container is-max-desktop">
@@ -179,16 +207,16 @@
           </div>
           <div class="container is-max-desktop">
             <img src="static/images/case1.png" alt="Case 1" style="max-width: 100%; height: auto; margin-bottom: 1rem;"/>
-            <p><em>Figure 2. Launch the email application from the home screen to access the inbox.</em></p>
+            <p><em>Figure 4. Launch the email application from the home screen to access the inbox.</em></p>
             <br>
             <img src="static/images/case2.png" alt="Case 2" style="max-width: 100%; height: auto; margin-bottom: 1rem;"/>
-            <p><em>Figure 3. Click on "All News" button in the Cerebra Research application to view news content.</em></p>
+            <p><em>Figure 5. Click on "All News" button in the Cerebra Research application to view news content.</em></p>
             <br>
             <img src="static/images/case3.png" alt="Case 3" style="max-width: 100%; height: auto; margin-bottom: 1rem;"/>
-            <p><em>Figure 4. Mark a reminder task as completed by tapping the "Complete" button in the Reminder app.</em></p>
+            <p><em>Figure 6. Mark a reminder task as completed by tapping the "Complete" button in the Reminder app.</em></p>
             <br>
             <img src="static/images/case4.png" alt="Case 4" style="max-width: 100%; height: auto; margin-bottom: 1rem;"/>
-            <p><em>Figure 5. Apply product filters by tapping the "Apply Filter" button in the e-commerce app to refresh the item list.</em></p>
+            <p><em>Figure 7. Apply product filters by tapping the "Apply Filter" button in the e-commerce app to refresh the item list.</em></p>
           </div>
         </div>
       </div>
@@ -203,7 +231,12 @@
       <p>If you find our project useful, we hope you can star our repo and cite our paper as follows:</p>
     <pre class="bibtex-block">
 <code>
-  11111
+@article{zheng2026code2world,
+  title={Code2World: A GUI World Model via Renderable Code Generation},
+  author={Zheng, Yuhao and Zhong, Li'an and Wang, Yi and Dai, Rui and Liu, Kaikui and Chu, Xiangxiang and Lv, Linyuan and Torr, Philip and Lin, Kevin Qinghong},
+  journal={arXiv preprint arXiv:2602.09856},
+  year={2026}
+}
 </code></pre>
     </div>
   </div>
