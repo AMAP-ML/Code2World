@@ -5,10 +5,9 @@
 <a href="https://huggingface.co/datasets/GD-ML/AndroidCode" target="_blank"><img src="https://img.shields.io/badge/🤗%20Dataset-AndroidCode-ffd21e"></a>
 <a href="https://huggingface.co/GD-ML/Code2World" target="_blank"><img src="https://img.shields.io/badge/🤗%20Model-Code2World(8B)-ffd21e"></a>
 </p>
-This is the official repo for Code2World, a novel VLM-based GUI World Model that predicts dynamic transitions via renderable code generation.
+<!-- This is the official repo for Code2World, a novel VLM-based GUI World Model that predicts dynamic transitions via renderable code generation. -->
 
-
-**TL;DR: Coder with Next-Page Prediction as GUI World Model.** 
+📖 **TL;DR:** Coder with Next-Page Prediction as GUI World Model.
 
 
 ## 🎯 Overview
