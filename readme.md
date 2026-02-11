@@ -1,12 +1,19 @@
-# <img src="figure/logo.png" alt="icon" width="50" height="50"> Code2World: A GUI World Model via Renderable Code Generation
-<p align="center">
-<a href="https://amap-ml.github.io/Code2World" target="_blank"><img src="https://img.shields.io/badge/Project-Page-brightgreen"></a>
-<a href="https://arxiv.org/abs/2602.09856" target="_blank"><img src="https://img.shields.io/badge/arXiv-2511.02778-red"></a>
-<a href="https://huggingface.co/GD-ML/Code2World" target="_blank"><img src="https://img.shields.io/badge/🤗%20Model-Code2World-ffd21e"></a>
-<a href="https://huggingface.co/datasets/GD-ML/AndroidCode" target="_blank"><img src="https://img.shields.io/badge/🤗%20Dataset-AndroidCode-ffd21e"></a>
-<!-- <a href="https://huggingface.co/papers/2602.09856" target="_blank"><img src="https://img.shields.io/badge/🤗%20Daily%20Paper-2602.09856-ffd21e"></a>/ -->
-</p>
-Official implementation for Code2World, a novel VLM-based GUI World Model that predicts dynamic transitions via renderable code generation.
+# <img src="figure/logo.png" alt="icon" width="24" height="24"> Code2World: A GUI World Model via Renderable Code Generation
+<div style='display:flex; gap: 0.25rem; '>
+<a href='LICENCE'><img src='https://img.shields.io/badge/License-Apache 2.0-g.svg'></a>
+<a href='https://arxiv.org/abs/2602.09856'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
+</div>
+This is the official repo for Code2World, a novel VLM-based GUI World Model that predicts dynamic transitions via renderable code generation.
+
+
+
+
+## 🎯 Overview
+Autonomous GUI agents interact with environments by perceiving interfaces and executing actions.As a virtual sandbox, GUI World model empowers agents with human-like foresight by enabling action-conditioned prediction.However, existing text- and pixel- based approaches struggle to simultaneously achieve high visual fidelity and fine-grained structural controllability.To this end, we propose **Code2World**, a vision-language coder that simulates next visual state via **renderable code generation**. Especially, to address the data scarcity problem, we construct **AndroidCode** by translating GUI trajectories into high-fidelity HTML and refining synthesized code through a visual-feedback revision loop, resulting in **over 80K** high-quality screen-action pairs. To adapt existing VLMs into code prediction, we first perform SFT as a cold start for format layout following, then further apply **Render-Aware Reinforcement Learning** which uses the final rendered outcome by enforcing visual semantic fidelity and action consistency. Extensive experiments demonstrate that Code2World-8B achieves the top-performing next UI prediction, rivaling the competitive GPT-5 and Gemini-3-Pro-Image. Notably, \textit{Code2World significantly enhances downstream navigation success rates in a flexible manner}, boosting Gemini-2.5-Flash by {+9.5\%} on AndroidWorld navigation.
+<!-- ![pipeline](figure/pipeline.jpg) -->
+![teaser](figure/teaser.png)
+_Figure 1. Illustration of Code2World. Given a current GUI observation and an action, Code2World predicts the next screenshot via renderable code generation._
+
 
 ## 🕹️ Usage
 ### Environment Setup
@@ -53,14 +60,11 @@ _Figure 5. Apply product filters by tapping the "Apply Filter" button in the e-c
 ## 📑 Citation
 If you find our project useful, we hope you can star our repo and cite our paper as follows:
 ```
-@misc{code2world,
-      title={Code2World: A GUI World Model via Renderable Code Generation}, 
-      author={Yuhao Zheng and Li'an Zhong and Yi Wang and Rui Dai and Kaikui Liu and Xiangxiang Chu and Linyuan Lv and Philip Torr and Kevin Qinghong Lin},
-      year={2026},
-      eprint={2602.09856},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2602.09856}, 
+@article{zheng2026code2world,
+  title={Code2World: A GUI World Model via Renderable Code Generation},
+  author={Zheng, Yuhao and Zhong, Li'an and Wang, Yi and Dai, Rui and Liu, Kaikui and Chu, Xiangxiang and Lv, Linyuan and Torr, Philip and Lin, Kevin Qinghong},
+  journal={arXiv preprint arXiv:2602.09856},
+  year={2026}
 }
 ```
 
