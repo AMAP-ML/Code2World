@@ -1,7 +1,7 @@
 # <img src="figure/logo.png" alt="icon" width="50" height="50"> Code2World: A GUI World Model via Renderable Code Generation
 <p align="center">
 <a href="https://amap-ml.github.io/Code2World" target="_blank"><img src="https://img.shields.io/badge/Project-Page-brightgreen"></a>
-<a href="https://arxiv.org/abs/2602.09856" target="_blank"><img src="https://img.shields.io/badge/arXiv-2511.02778-red"></a>
+<a href="https://arxiv.org/abs/2602.09856" target="_blank"><img src="https://img.shields.io/badge/arXiv-2602.09856-red"></a>
 <a href="https://huggingface.co/datasets/GD-ML/AndroidCode" target="_blank"><img src="https://img.shields.io/badge/🤗%20Dataset-AndroidCode-ffd21e"></a>
 <a href="https://huggingface.co/GD-ML/Code2World" target="_blank"><img src="https://img.shields.io/badge/🤗%20Model-Code2World(8B)-ffd21e"></a>
 </p>
